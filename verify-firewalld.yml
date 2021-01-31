@@ -1,0 +1,19 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: ensure firewalld is at the latest version
+    yum:
+      name: firewalld
+      state: latest
+    notify:
+    - restart firewalld
+  - name: ensure firewalld is running
+    service:
+      name: firewalld
+      state: started
+  handlers:
+    - name: restart firewalld
+      service:
+        name: firewalld
+        state: restarted

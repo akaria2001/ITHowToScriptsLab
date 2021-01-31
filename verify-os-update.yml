@@ -1,0 +1,8 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: ensure OS is fully patched and up to date
+    yum:
+      name: "*"
+      state: latest

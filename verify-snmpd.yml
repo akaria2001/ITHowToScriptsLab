@@ -1,0 +1,31 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: ensure net-snmp is at the latest version
+    yum:
+      name: net-snmp
+      state: latest
+  - name: write the snmpd config file
+    template:
+      src: /srv/snmpd.j2
+      dest: /etc/snmp/snmpd.conf
+  - name: ensure net-snmp-utils is at the latest version
+    yum:
+      name: net-snmp-utils
+      state: latest
+  - name: open firewall port for snmpd
+    firewalld:
+      service: snmp
+      immediate: true
+      permanent: true
+      state: enabled
+  - name: ensure snmpd is running
+    service:
+      name: snmpd
+      state: restarted
+  handlers:
+    - name: restart snmpd
+      service:
+        name: snmpd
+        state: restarted

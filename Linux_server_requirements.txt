@@ -1,0 +1,47 @@
+Linux Server requirements to be configured via Ansible
+
+create the following users
+
+Mo
+Bobby
+Sadio
+Diogo
+John
+Ian
+
+/etc/skel is setup
+
+login script with banner
+
+logout script to push used commands to configuration file
+
+Scripts to be pushed across
+
+Install the following on all servers
+
+which
+gcc
+make
+emacs-nox
+firewalld
+snmpd and configure it - open firewall port for UDP port 161 to control machine to test connectivity
+
+Open the firewall on all servers for
+
+SSH
+
+For web servers
+
+Install Appache
+Enable Apache
+Copy default web page across
+Enable Firewall rule for http and https
+
+For Database servers
+
+Install MariaDB
+Create /mysqldata
+Set MariaDB to use /mysqldata
+test MariaDB is using /mysqldata as @@DATADIR
+Enable Firewall rule for MariaDB tcp port 3306
+

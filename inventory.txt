@@ -1,0 +1,15 @@
+CentOS7-app-1
+CentOS7-app-2
+CentOS7-app-3
+CentOS7-app-4
+CentOS7-app-5
+CentOS7-dbs-1
+CentOS7-dbs-2
+CentOS7-dbs-3
+CentOS7-dbs-4
+CentOS7-dbs-5
+CentOS7-web-1
+CentOS7-web-2
+CentOS7-web-3
+CentOS7-web-4
+CentOS7-web-5

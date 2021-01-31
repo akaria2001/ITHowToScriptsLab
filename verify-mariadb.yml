@@ -1,0 +1,31 @@
+---
+- hosts: dbservers
+  vars:
+    tcp_port: 3306
+  remote_user: root
+  tasks:
+  - name: ensure mariadb is at the latest version
+    yum:
+      name: mariadb-server
+      state: latest
+  - name: write the mariadb config file
+    template:
+      src: /srv/my.cnf.j2
+      dest: /etc/my.cnf
+    notify:
+    - restart mariadb
+  - name: open firewall port for mariadb
+    firewalld:
+      service: mysql
+      immediate: true
+      permanent: true
+      state: enabled
+  - name: ensure mariadb is running
+    service:
+      name: mariadb
+      state: started
+  handlers:
+    - name: restart mariadb
+      service:
+        name: mariadb
+        state: restarted
