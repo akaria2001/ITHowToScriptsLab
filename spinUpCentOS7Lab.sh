@@ -1,4 +1,5 @@
 #!/bin/sh
+# Amit Karia www.it-howto.co.uk
 FIRST=1
 LAST=2
 clear
