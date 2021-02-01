@@ -1,6 +1,6 @@
 #!/bin/bash
 # LAB Setup Script for Linux Servers
-# 13/10/2020 - kariaa@lsbu.ac.uk
+# Amit Karia - www.it-howto.co.uk
 
 INPUT=/tmp/menu.sh.$$
 
