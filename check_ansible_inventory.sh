@@ -1,4 +1,5 @@
 #!/bin/sh
+# Amit Karia www.it-howto.co.uk
 clear
 printf "Checking Ansible Inventory\n"
 printf "Checking all hosts\n";
