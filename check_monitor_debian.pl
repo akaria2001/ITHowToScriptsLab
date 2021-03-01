@@ -1,4 +1,5 @@
 #!/usr/bin/perl -w
+# Amit Karia www.it-howto.co.uk
 use strict;
 use Net::SMTP;
 # Script to check Load Average Monitor keeps running as sometimes it crashes
