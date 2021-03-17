@@ -6,3 +6,5 @@
     yum:
       name: "*"
       state: latest
+  - name: reboot the container
+    reboot:
