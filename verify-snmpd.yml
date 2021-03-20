@@ -8,7 +8,7 @@
       state: latest
   - name: write the snmpd config file
     template:
-      src: /srv/snmpd.j2
+      src: /usr/local/bin/snmpd.j2
       dest: /etc/snmp/snmpd.conf
   - name: ensure net-snmp-utils is at the latest version
     yum:

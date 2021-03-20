@@ -10,7 +10,7 @@
       state: latest
   - name: write the mariadb config file
     template:
-      src: /srv/my.cnf.j2
+      src: /usr/local/bin/my.cnf.j2
       dest: /etc/my.cnf
     notify:
     - restart mariadb
