@@ -15,7 +15,7 @@ USER="root"
 
 # Check host is up, if down ignore otherwise check SSL trust
     if ping -c 1 $HOST > /dev/null 2>&1; then
-	ssh-copy-id $USER\@$HOST
+	ssh-copy-id -o StrictHostKeyChecking=no $USER\@$HOST
     fi
 done
 
