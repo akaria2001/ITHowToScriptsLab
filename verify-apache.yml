@@ -23,7 +23,7 @@
       state: enabled
   - name: write the apache config file
     template:
-      src: /srv/httpd.j2
+      src: /usr/local/bin/httpd.j2
       dest: /etc/httpd/conf/httpd.conf
   - name: create default page content
     copy:
