@@ -11,3 +11,4 @@ yum install net-snmp -y
 yum install net-snmp-utils -y
 yum install ansible -y
 yum install bzip2 -y
+yum install expect -y
