@@ -2,12 +2,8 @@
 - hosts: all
   remote_user: root
   tasks:
-  - name: ensure net-snmp is at the latest version
-    yum:
-      name: net-snmp
-      state: latest
   - name: Create a login user
     user:
       name: amit
-      password: '$6$eojJB2uoJslyaXqU$vGIqtSzlOhawoN2iZ4fIYLZNVZDAEICGmbmJvyPputRg7lnCTCxyV40/52.ql/fSPoPICsi7OpSQwL9EZz.B60'
-
+      password: '$6$CxzO99fa4hT2Qk5E$D8AoRiFAwR5T50MedTvdW.D7koDLWLlfKSZfskK8rvsE2y6C7IdHDXNizi.q5hvtFQGcCvFD4HgkSq1XeMzUy1'
+      groups: wheel
