@@ -1,7 +1,7 @@
 #!/bin/sh
 # Amit Karia www.it-howto.co.uk
 FIRST=1
-LAST=2
+LAST=5
 clear
 printf "Spinning up standard Linux containers\n"
 for f in `seq $FIRST $LAST`; do lxc launch CentOS7-template CentOS7-app-$f ; done
