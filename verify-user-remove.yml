@@ -1,0 +1,16 @@
+---
+- name: Remove Users
+  hosts: all
+  remote_user: root
+  become: true
+  vars_files:
+    - usernames.yml
+  tasks:
+    - name: Remove users
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+        force: yes
+      with_items:
+        - "{{ names }}"
