@@ -4,7 +4,7 @@
   remote_user: root
   become: true
   vars_files:
-    - usernames.yml
+    - remove_usernames.yml
   tasks:
     - name: Remove users
       user:
