@@ -1,0 +1,24 @@
+---
+- name: Create New Production Users
+  hosts: production
+  remote_user: root
+  become: true
+  vars_files:
+    - usernames_prod.yml
+  tasks:
+    - name: Create Production Users, Home Directory and add to groups 
+      user:
+        name: "{{ item }}"
+        password: '$6$CxzO99fa4hT2Qk5E$D8AoRiFAwR5T50MedTvdW.D7koDLWLlfKSZfskK8rvsE2y6C7IdHDXNizi.q5hvtFQGcCvFD4HgkSq1XeMzUy1'
+        shell: /bin/bash
+        system: no
+        state: present
+        createhome: yes
+        groups: wheel
+        append: yes
+        home: "/home/{{ item }}"
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
+      with_items:
+        - "{{ names }}"
