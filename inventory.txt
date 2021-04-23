@@ -1,3 +1,9 @@
-CentOS7-app-1000
-CentOS7-dbs-1000
-CentOS7-web-1000
+linux-rh7-dns-01.lab.local
+linux-rh7-ans-01.lab.local
+linux-rh7-nfs-01.lab.local
+linux-rh7-jmp-01.lab.local
+linux-rh7-jmp-02.lab.local
+linux-rh7-dbs-01.lab.local
+linux-rh7-web-01.lab.local
+linux-rh7-pat-01.lab.local
+linux-rh7-aut-01.lab.local

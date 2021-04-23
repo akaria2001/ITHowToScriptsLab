@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Copy DNS check script across to Servers
+    template:
+      src: /usr/local/bin/check_dns.sh
+      dest: /usr/local/bin/check_dns.sh
+      mode: preserve
+  - name: Copy inventory file across to Servers
+    template:
+      src: /usr/local/bin/inventory.txt
+      dest: /usr/local/bin/inventory.txt
+      mode: preserve

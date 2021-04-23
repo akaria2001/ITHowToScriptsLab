@@ -1,0 +1,16 @@
+---
+- name: Remove Users
+  hosts: ansible
+  remote_user: root
+  become: true
+  vars_files:
+    - remove_usernames_ansible.yml
+  tasks:
+    - name: Remove users
+      user:
+        name: "{{ item }}"
+        state: absent
+        remove: yes
+        force: yes
+      with_items:
+        - "{{ names }}"

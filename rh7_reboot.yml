@@ -1,0 +1,13 @@
+---
+- hosts: production
+  become: true
+  become_user: root
+  tasks:
+          - name: Rebooting the machine
+            reboot:
+- hosts: jumpstations
+  become: true
+  become_user: root
+  tasks:
+          - name: Rebooting the machine
+            reboot:

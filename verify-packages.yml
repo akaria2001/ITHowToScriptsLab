@@ -1,12 +1,29 @@
 ---
-- hosts: all
+- hosts: jumpstations
   remote_user: root
   tasks:
-  - name: ensure emacs-nox is at the latest version
+  - name: ensure emacs-nox is at the latest version on Jumpstations
     yum:
       name: emacs-nox
       state: latest
-  - name: ensure which is at the latest version
+- hosts: production
+  remote_user: root
+  tasks:
+  - name: ensure emacs-nox is at the latest version on Production Servers
     yum:
-      name: which
+      name: emacs-nox
+      state: latest
+- hosts: jumpstations
+  remote_user: root
+  tasks:
+  - name: ensure bind-utils is at the latest version on Jumpstations
+    yum:
+      name: bind-utils
+      state: latest
+- hosts: production
+  remote_user: root
+  tasks:
+  - name: ensure bind-utils is at the latest version on Production Servers
+    yum:
+      name: bind-utils
       state: latest

@@ -1,0 +1,15 @@
+---
+- hosts: production
+  remote_user: root
+  tasks:
+  - name: ensure OS is fully patched and up to date on Production Servers
+    yum:
+      name: "*"
+      state: latest
+- hosts: jumpstations
+  remote_user: root
+  tasks:
+  - name: ensure OS is fully patched and up to date on Jumpstation Servers
+    yum:
+      name: "*"
+      state: latest
