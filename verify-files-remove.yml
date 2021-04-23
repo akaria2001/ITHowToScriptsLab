@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Delete packages.json file
+    file:
+      state: absent
+      path: /var/lib/rhsm/packages/packages.json
+
+

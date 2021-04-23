@@ -1,3 +1,4 @@
 #!/bin/sh
-ansible all -a "rm -f /var/lib/rhsm/packages/packages.json"
+# www.it-howto.co.uk
+ansible-playbook verify-files-remove.yml
 ansible all -a "systemctl restart rhsmcertd.service"
