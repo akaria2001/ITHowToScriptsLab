@@ -1,0 +1,9 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: ensure rhsmcertd is restarted
+    service:
+      name: rhsmcertd
+      state: restarted
+
