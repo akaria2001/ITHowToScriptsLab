@@ -28,7 +28,7 @@ def main():
             input("Press any key to continue: ")
 
         elif(user_choice == 3):
-            print("\nDisplyaing Disk Space\n")
+            print("\nDisplaying Disk Space\n")
             os.system('df -h')
             print("\n")
             input("Press any key to continue")
