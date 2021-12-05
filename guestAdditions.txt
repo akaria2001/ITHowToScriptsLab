@@ -1,0 +1,4 @@
+Hack Job - Update Guest Additions on Lab - quick and dirty approach
+
+for f in `cat /etc/hosts | awk '{print $2}' | grep ^linux` ; do scp /tmp/VBoxLinuxAdditions.run $f:/tmp/. ; done
+for f in `cat /etc/hosts | awk '{print $2}' | grep ^linux` ; do ssh $f /tmp/VBoxLinuxAdditions.run ; done
